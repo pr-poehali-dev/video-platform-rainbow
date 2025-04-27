@@ -8,7 +8,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle 
 } from "@/components/ui/navigation-menu";
-import { Home, Play, User, Search } from "lucide-react";
+import { Home, Play, User, Search, FileText, HelpCircle, Brain } from "lucide-react";
 
 const Navbar = () => {
   return (
@@ -56,10 +56,37 @@ const Navbar = () => {
             </NavigationMenuItem>
             
             <NavigationMenuItem>
+              <Link to="/articles">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <FileText className="mr-2 h-4 w-4" />
+                  Статьи
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link to="/ai">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <Brain className="mr-2 h-4 w-4" />
+                  Нейросеть
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            
+            <NavigationMenuItem>
               <Link to="/search">
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   <Search className="mr-2 h-4 w-4" />
                   Поиск
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link to="/help">
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <HelpCircle className="mr-2 h-4 w-4" />
+                  Помощь
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
